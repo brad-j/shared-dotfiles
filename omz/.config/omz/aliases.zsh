@@ -2,13 +2,13 @@
 alias c='clear'
 
 # Git
-alias ga='git add -A'
-alias gs='git status'
-alias gp='git push'
+alias ga='g add -A'
+alias gs='g status'
+alias gp='g push'
+alias gc="g commit -m"
 
-function gc () {
-  git commit -m "$1"
-}
+# General
+alias fman="compgen -c | fzf | xargs man"
 
 # Waybar
 alias rw='pkill waybar && hyprctl dispatch exec waybar'
