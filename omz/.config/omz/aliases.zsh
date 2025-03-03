@@ -1,5 +1,6 @@
 # Shell
 alias c='clear'
+alias n='nvim'
 
 # Git
 alias ga='g add -A'
