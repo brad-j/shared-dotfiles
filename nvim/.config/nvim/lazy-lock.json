@@ -1,4 +1,7 @@
 {
+  "blink.cmp": { "branch": "main", "commit": "dcda20d3aa345025699a920c45b0a0603551f41d" },
+  "copilot.lua": { "branch": "master", "commit": "30321e33b03cb924fdcd6a806a0dc6fa0b0eafb9" },
+  "friendly-snippets": { "branch": "main", "commit": "efff286dd74c22f731cdec26a70b46e5b203c619" },
   "gruvbox.nvim": { "branch": "main", "commit": "089b60e92aa0a1c6fa76ff527837cd35b6f5ac81" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lualine.nvim": { "branch": "master", "commit": "f4f791f67e70d378a754d02da068231d2352e5bc" },

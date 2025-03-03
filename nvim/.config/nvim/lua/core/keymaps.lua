@@ -2,9 +2,8 @@ local map = vim.keymap.set
 
 map('n', '<space><space>x', '<cmd>source %<CR>' )
 -- Map jk to esc
-map('i', 'jk', '<esc>l', defaults)
+map('i', 'jk', '<esc>')
 
--- map for quick quit, save files using leader key
 ---- Normal mode
 map('n', '<Leader>w', ':write<CR>')
 map('n', '<Leader>a', ':wqa<CR>')

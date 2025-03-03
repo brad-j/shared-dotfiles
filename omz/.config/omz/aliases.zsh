@@ -15,7 +15,7 @@ alias fman="compgen -c | fzf | xargs man"
 alias rw='pkill waybar && hyprctl dispatch exec waybar'
 
 # eza
-alias ll='eza -la --color=always --total-size --icons=always --no-permissions --no-user --no-time'
+alias ll='eza -la --color=always --icons=always --no-filesize --no-permissions --no-user --no-time'
 
 # bat
 alias cat='bat'
