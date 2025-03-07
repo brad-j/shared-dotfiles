@@ -20,9 +20,9 @@ alias ll='eza -la --color=always --icons=always --no-filesize --no-permissions -
 # bat
 alias cat='bat'
 
-# proxmox ssh
-# alias ssha='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/piper-arch'
-
 function ssha {
   eval "$(ssh-agent -s)" && ssh-add ~/.ssh/$1
 }
+
+# Weather
+alias weather='curl wttr.in'
