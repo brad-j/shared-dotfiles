@@ -8,6 +8,10 @@ alias gs='g status'
 alias gp='g push'
 alias gc="g commit -m"
 
+# k3s
+alias k='kubectl'
+alias ktx='k config get-contexts'
+
 # General
 alias fman="compgen -c | fzf | xargs man"
 
