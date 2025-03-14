@@ -1,6 +1,7 @@
 # Shell
 alias c='clear'
 alias n='nvim'
+alias fman="compgen -c | fzf | xargs man"
 
 # Git
 alias ga='g add -A'
@@ -8,12 +9,12 @@ alias gs='g status'
 alias gp='g push'
 alias gc="g commit -m"
 
+# OpenTofu
+alias t='tofu'
+
 # k3s
 alias k='kubectl'
 alias ktx='k config get-contexts'
-
-# General
-alias fman="compgen -c | fzf | xargs man"
 
 # Waybar
 alias rw='pkill waybar && hyprctl dispatch exec waybar'

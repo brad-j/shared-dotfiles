@@ -10,6 +10,7 @@ map('i', 'jk', '<esc>')
 map('n', '<Leader>w', ':write<CR>')
 map('n', '<Leader>a', ':wqa<CR>')
 map('n', '<Leader>x', ':wq<CR>')
+map('n', '<Leader>q', ':q<CR>')
 
 -- Unhighlight search
 map('n', '<Esc>', '<cmd>nohlsearch<CR>')
