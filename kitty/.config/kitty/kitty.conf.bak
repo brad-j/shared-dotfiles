@@ -2,9 +2,9 @@
 include gruvbox_dark.conf
 
 # Font
-# font_family Geist Mono Nerd
-# italic_font auto
-# bold_italic_font auto
+font_family Geist Mono Nerd
+italic_font auto
+bold_italic_font auto
 font_size 15.0
 modify_font cell_height 125%
 
@@ -28,11 +28,3 @@ map cmd+4 goto_tab 4
 
 map cmd+n next_tab
 map cmd+p previous_tab
-
-
-# BEGIN_KITTY_FONTS
-font_family      family="GeistMono Nerd Font Mono"
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
-# END_KITTY_FONTS
