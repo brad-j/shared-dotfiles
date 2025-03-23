@@ -12,6 +12,10 @@ alias gc="g commit -m"
 # OpenTofu
 alias t='tofu'
 
+# pnpm
+alias p='pnpm'
+alias pd='pnpm dev'
+
 # k3s
 alias k='kubectl'
 alias ktx='k config get-contexts'
