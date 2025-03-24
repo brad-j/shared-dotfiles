@@ -9,6 +9,14 @@ return {
     { '<leader><leader>', '<cmd>Telescope cmdline<cr>', desc = 'Cmdline' }
   },
   opts = {
+    pickers = {
+      live_grep = {
+        file_ignore_patterns = { 'node_modules', '.git' },
+      },
+      find_files = {
+        file_ignore_patterns = { 'node_modules', '.git' },
+      },
+    },
     extensions = {
       cmdline = {
         picker = {
@@ -33,5 +41,3 @@ return {
     require("telescope").load_extension('cmdline')
   end,
 }
-
-
