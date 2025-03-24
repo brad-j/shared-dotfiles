@@ -12,6 +12,10 @@ map('n', '<leader>a', ':wqa<CR>', { desc = 'Save all and quit' })
 map('n', '<leader>x', ':wq<CR>', { desc = 'Save and quit' })
 map('n', '<leader>q', ':q<CR>', { desc = 'Quit' })
 
+-- New line without insert mode
+map('n', '<leader>o', 'o<Esc>jk', { desc = 'New line below' })
+map('n', '<leader>O', 'O<Esc>jk', { desc = 'New line above' })
+
 -- Split screens
 map('n', '<leader>sv', '<cmd>vs<CR>', { desc = 'Split vertically' })
 map('n', '<leader>sh', '<cmd>sp<CR>', { desc = 'Split horizontally' })

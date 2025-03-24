@@ -1,7 +1,7 @@
 # Shell
 alias c='clear'
 alias n='nvim'
-alias fman="compgen -c | fzf | xargs man"
+alias fman='compgen -c | fzf | xargs man'
 
 # Git
 alias ga='g add -A'
@@ -16,9 +16,11 @@ alias t='tofu'
 alias p='pnpm'
 alias pd='pnpm dev'
 
-# k3s
+# k3s / k8s
 alias k='kubectl'
 alias ktx='k config get-contexts'
+alias kname='k config set-context --current --namespace'
+alias knameget='k config view --minify | grep namespace:'
 
 # Waybar
 alias rw='pkill waybar && hyprctl dispatch exec waybar'
