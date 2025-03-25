@@ -12,9 +12,11 @@ return {
     pickers = {
       live_grep = {
         file_ignore_patterns = { 'node_modules', '.git' },
+        hidden = true,
       },
       find_files = {
         file_ignore_patterns = { 'node_modules', '.git' },
+        hidden = true,
       },
     },
     extensions = {
