@@ -38,3 +38,7 @@ function ssha {
 
 # Weather
 alias weather='curl wttr.in'
+
+# Obsidian
+alias pvault='z /Volumes/home/obsidian/personal-vault/'
+alias wvault='z /Volumes/home/obsidian/work-vault/'

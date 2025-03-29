@@ -3,19 +3,25 @@ vim.g.maplocalleader = " "
 
 vim.wo.number = true
 vim.wo.relativenumber = true
+
 local opt = vim.opt
 
+opt.numberwidth = 4
+opt.signcolumn = 'yes:1'
 -- Tabs settings
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.softtabstop = 2
 
-opt.mouse = 'a'
+-- Folding
+opt.foldmethod = 'expr'
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+opt.foldcolumn = '0'
+opt.foldtext = ""
+opt.foldlevelstart = 99
 
-vim.schedule(function()
-  opt.clipboard = 'unnamedplus'
-end)
+opt.mouse = 'a'
 
 opt.ignorecase = true
 opt.smartcase = true

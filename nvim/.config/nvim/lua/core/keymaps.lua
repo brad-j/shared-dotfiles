@@ -22,9 +22,6 @@ map('n', '<leader>sh', '<cmd>sp<CR>', { desc = 'Split horizontally' })
 map('n', '<leader>ll', '<C-w>l', { desc = 'Move to right window' })
 map('n', '<leader>hh', '<C-w>h', { desc = 'Move to left window' })
 
--- IncRename
-map("n", "<leader>rn", ":IncRename ")
-
 -- Unhighlight search
 map('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
@@ -36,4 +33,3 @@ map('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
 -- Oil
 map('n', '<leader>-', '<cmd>Oil<CR>', { desc = 'Open parent directory' })
-
