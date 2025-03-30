@@ -21,8 +21,8 @@ require("lazy").setup({
   { import = "plugins" }
 })
 
-vim.o.background = "dark"
-vim.cmd([[colorscheme gruvbox]])
+--vim.o.background = "dark"
+vim. cmd([[colorscheme everforest]])
 
 require('core.keymaps')
 require('core.options')
