@@ -17,10 +17,12 @@ map('n', '<leader>o', 'o<Esc>jk', { desc = 'New line below' })
 map('n', '<leader>O', 'O<Esc>jk', { desc = 'New line above' })
 
 -- Split screens
-map('n', '<leader>sv', '<cmd>vs<CR>', { desc = 'Split vertically' })
-map('n', '<leader>sh', '<cmd>sp<CR>', { desc = 'Split horizontally' })
+map('n', '<leader>vs', '<cmd>:split<CR>', { desc = 'Split vertically' })
+map('n', '<leader>hs', '<cmd>:split<CR>', { desc = 'Split horizontally' })
 map('n', '<leader>ll', '<C-w>l', { desc = 'Move to right window' })
 map('n', '<leader>hh', '<C-w>h', { desc = 'Move to left window' })
+map('n', '<leader>kk', '<C-w>t', { desc = 'Move to top window' })
+map('n', '<leader>jj', '<C-w>b', { desc = 'Move to bottom window' })
 
 -- Unhighlight search
 map('n', '<Esc>', '<cmd>nohlsearch<CR>')
