@@ -1,0 +1,48 @@
+# Display
+linux_display_server wayland
+
+# Font
+font_size 16.0
+modify_font cell_height 125%
+
+# Cursor
+cursor_beam_thickness 2
+# cursor #20C20E
+
+# Window Settings
+window_padding_width 0 0 0 0
+background_opacity 0.95
+background_blur 50
+
+# Tabs
+tab_bar_edge top
+tab_bar_style fade
+
+# Switch tabs
+map cmd+1 goto_tab 1
+map cmd+2 goto_tab 2
+map cmd+3 goto_tab 3
+map cmd+4 goto_tab 4
+
+map cmd+n next_tab
+map cmd+p previous_tab
+
+# No prompt on quit
+confirm_os_window_close -1
+
+# BEGIN_KITTY_FONTS
+font_family      family='GeistMono Nerd Font Mono' postscript_name=GeistMonoNFM-Regular
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS
+ 
+# Theme
+include gruvbox_dark.conf
+
+
+
+# BEGIN_KITTY_THEME
+# Everforest Dark Hard
+include everforest.conf
+# END_KITTY_THEME
