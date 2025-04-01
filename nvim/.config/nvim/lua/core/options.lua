@@ -1,13 +1,18 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- General settings
 vim.wo.number = true
 vim.wo.relativenumber = true
+-- vim.wo.wrap = true
+--vim.wo.textwidth = 80
+--vim.wo.linebreak = true
 
 local opt = vim.opt
-
+opt.textwidth = 80
 opt.numberwidth = 4
 opt.signcolumn = 'yes:1'
+
 -- Tabs settings
 opt.tabstop = 2
 opt.shiftwidth = 2
