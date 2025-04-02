@@ -5,7 +5,16 @@ return {
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
     "nvim-telescope/telescope.nvim", -- optional
-    "neovim/nvim-lspconfig", -- optional
   },
-  opts = {} -- your configuration
+  opts = {}, -- your configuration
+  config = function()
+   require("tailwind-tools").setup({
+      conceal = {
+        enabled = false,
+        min_length = nil,
+        symbol = "󱏿",
+        highlight = { fg = "#38BDF8" }
+      }
+   })
+  end,
 }

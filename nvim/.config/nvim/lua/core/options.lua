@@ -1,13 +1,14 @@
+-- Global variables
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- General settings
+-- Window settings
 vim.wo.number = true
 vim.wo.relativenumber = true
--- vim.wo.wrap = true
---vim.wo.textwidth = 80
---vim.wo.linebreak = true
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 
+-- General settings
 local opt = vim.opt
 opt.textwidth = 80
 opt.numberwidth = 4

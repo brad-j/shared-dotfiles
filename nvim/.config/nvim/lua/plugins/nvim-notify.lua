@@ -5,6 +5,5 @@ return {
     timeout = 3000,
     background_colour = '#272E34',
     level = vim.log.levels.INFO,
-    minimum_width = 50
   },
 }
