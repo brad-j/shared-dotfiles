@@ -5,6 +5,10 @@ return {
     require('conform').setup({
       formatters_by_ft = {
         astro = { "prettierd" },
+        css = { "prettierd" },
+        html = { "prettierd" },
+        javascript = { "prettierd" },
+        lua = { "stylua" },
         typescript = { "prettierd" },
       },
       format_on_save = {
