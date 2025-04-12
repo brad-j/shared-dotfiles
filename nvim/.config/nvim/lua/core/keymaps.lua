@@ -35,3 +35,6 @@ map("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 
 -- Oil
 map("n", "<leader>-", "<cmd>Oil<CR>", { desc = "Open parent directory" })
+
+-- Copilot
+map("n", "<leader>aa", "<cmd>CopilotChatToggle<CR>", { desc = "Open Copilot Chat" })
