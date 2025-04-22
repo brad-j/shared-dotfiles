@@ -48,3 +48,8 @@ opt.scrolloff = 10
 
 -- Copilot
 vim.opt.splitright = true
+
+-- Clipboard Maybe?
+vim.schedule(function()
+  vim.opt.clipboard = "unnamedplus"
+end)

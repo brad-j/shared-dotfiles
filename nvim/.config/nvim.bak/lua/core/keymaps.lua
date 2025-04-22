@@ -8,6 +8,7 @@ map("i", "jk", "<esc>", { noremap = true, silent = true })
 
 -- Easy Save
 map("n", "<leader>w", ":write<CR>", { desc = "Save file" })
+
 -- map('n', '<leader>a', ':wqa<CR>', { desc = 'Save all and quit' })
 map("n", "<leader>x", ":wq<CR>", { desc = "Save and quit" })
 map("n", "<leader>q", ":q<CR>", { desc = "Quit" })
