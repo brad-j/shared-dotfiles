@@ -26,8 +26,8 @@ alias knameget='k config view --minify | grep namespace:'
 alias rw='pkill waybar && hyprctl dispatch exec waybar'
 
 # eza
-alias ll='eza -la --color=always --icons=always --no-filesize --no-user --no-time'
-alias lt='eza -T --color=always --icons=always --no-filesize --no-user --no-time'
+alias ll='eza -la --color=always --icons=always --no-user --no-time --binary'
+alias lt='eza -T --color=always --icons=always --no-user --no-time'
 
 # bat
 alias cat='bat'
