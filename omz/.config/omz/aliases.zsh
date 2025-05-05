@@ -3,6 +3,9 @@ alias c='clear'
 alias n='nvim'
 alias fman='compgen -c | fzf | xargs man'
 
+#yazi
+alias y='yazi'
+
 # Zellij
 alias zj='zellij'
 
