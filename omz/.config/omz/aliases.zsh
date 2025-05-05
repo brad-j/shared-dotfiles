@@ -3,6 +3,9 @@ alias c='clear'
 alias n='nvim'
 alias fman='compgen -c | fzf | xargs man'
 
+# Zellij
+alias zj='zellij'
+
 # Git
 alias ga='g add -A'
 alias gs='g status'

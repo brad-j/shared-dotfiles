@@ -4,7 +4,7 @@
     "title",
     {
       "type": "colors",
-      "symbol": "circle",
+      "symbol": "circle"
     },
     "os",
     "kernel",
@@ -12,11 +12,6 @@
     "packages",
     "shell",
     "de",
-    "wm",
-    "wmtheme",
-    "font",
-    "terminal",
-    "terminalfont",
     "cpu",
     "gpu",
     "memory",
@@ -26,8 +21,8 @@
     "localip",
     {
       "type": "colors",
-      "symbol": "circle",
+      "symbol": "circle"
     },
-    "weather",
-    ]
-  }
+    "weather"
+  ]
+}
