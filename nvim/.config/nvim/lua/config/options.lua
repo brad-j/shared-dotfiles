@@ -8,6 +8,8 @@ opt.signcolumn = "yes"
 opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
 opt.textwidth = 80
+opt.laststatus = 3
+
 -- Tabs and indentation
 opt.tabstop = 2
 opt.shiftwidth = 2
