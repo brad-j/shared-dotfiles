@@ -10,6 +10,16 @@ return {
       local mason_lspconfig = require("mason-lspconfig")
       local lspconfig = require("lspconfig")
 
+      config = function(_, opts)
+        local mason = require('mason')
+        for server, config in pairs(opts.servers) do
+          -- passing config.capabilities to blink.cmp merges with the capabilities in your
+          -- `opts[server].capabilities, if you've defined it
+          config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
+          lspconfig[server].setup(config)
+        end
+      end
+
       -- Configure Mason
       mason.setup({
         ui = {
@@ -20,14 +30,18 @@ return {
           },
         },
       })
-
+      local capabilities = require('blink.cmp').get_lsp_capabilities()
       -- Configure mason-lspconfig (only for ensuring servers are installed)
       mason_lspconfig.setup({
+        capabilities = capabilities,
         settings = {
           ['lua_ls'] = {
             Lua = {
               diagnostics = { globals = { 'vim' } },
             }
+          },
+          ['ts_ls'] = {
+            capabilities = capabilities
           }
         },
         ensure_installed = {

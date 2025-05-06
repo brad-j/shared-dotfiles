@@ -37,4 +37,4 @@ map("n", "<leader>dw", ":vertical resize -10<CR>", { desc = "Decrease window wid
 -- AI
 map({ "n", "v" }, "<leader>a", "<cmd>CodeCompanionChat Toggle<CR>", { desc = "AI companion" })
 map({ "n", "v" }, "<C-a>", "<cmd>CodeCompanionActions<CR>", { desc = "AI companion actions" })
-map("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
+map("v", "ga", "<cmd>CodeCompanionChat Add<CR>", { noremap = true, silent = true })
