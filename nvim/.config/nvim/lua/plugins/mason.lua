@@ -1,3 +1,6 @@
+---@alias vim table
+---@diagnostic disable: undefined-global
+
 return {
   {
     "williamboman/mason.nvim",
@@ -10,16 +13,6 @@ return {
       local mason_lspconfig = require("mason-lspconfig")
       local lspconfig = require("lspconfig")
 
-      config = function(_, opts)
-        local mason = require('mason')
-        for server, config in pairs(opts.servers) do
-          -- passing config.capabilities to blink.cmp merges with the capabilities in your
-          -- `opts[server].capabilities, if you've defined it
-          config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
-          lspconfig[server].setup(config)
-        end
-      end
-
       -- Configure Mason
       mason.setup({
         ui = {
@@ -29,33 +22,6 @@ return {
             package_uninstalled = "✗",
           },
         },
-      })
-      local capabilities = require('blink.cmp').get_lsp_capabilities()
-      -- Configure mason-lspconfig (only for ensuring servers are installed)
-      mason_lspconfig.setup({
-        capabilities = capabilities,
-        settings = {
-          ['lua_ls'] = {
-            Lua = {
-              diagnostics = { globals = { 'vim' } },
-            }
-          },
-          ['ts_ls'] = {
-            capabilities = capabilities
-          }
-        },
-        ensure_installed = {
-          "lua_ls",
-          "ts_ls",
-          "html",
-          "tailwindcss",
-          "emmet_ls",
-          "jsonls",
-          "cssls",
-          "marksman",
-          "bashls",
-        },
-        automatic_installation = true,
       })
 
       -- Common on_attach function
@@ -74,8 +40,30 @@ return {
 
       -- LSP Server Options (Common Capabilities)
       local capabilities = vim.lsp.protocol.make_client_capabilities()
-      -- Add capabilities manually.  Add more as needed.
       capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+      -- If you have nvim-cmp, you might want to use this instead:
+      -- local has_cmp, cmp_lsp = pcall(require, "cmp_nvim_lsp")
+      -- if has_cmp then
+      --   capabilities = cmp_lsp.default_capabilities(capabilities)
+      -- end
+
+      -- Configure mason-lspconfig
+      mason_lspconfig.setup({
+        ensure_installed = {
+          "lua_ls",
+          "ts_ls",
+          "html",
+          "tailwindcss",
+          "emmet_ls",
+          "jsonls",
+          "cssls",
+          "marksman",
+          "bashls",
+        },
+        automatic_installation = true,
+        automatic_enable = true
+      })
 
       -- LSP Server Options (Individual Server Settings)
       local servers = {
@@ -83,7 +71,11 @@ return {
           settings = {
             Lua = {
               diagnostics = { globals = { 'vim' } },
-              workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+              workspace = {
+                -- Point LuaLS to Neovim's runtime files
+                library = vim.api.nvim_get_runtime_file("", true),
+                checkThirdParty = false
+              },
             },
           },
         },
@@ -95,20 +87,22 @@ return {
         cssls = {},
         marksman = {},
         bashls = {},
-        prettierd = {},
       }
 
       -- Attach and setup each server
       for server, server_opts in pairs(servers) do
-        lspconfig[server].setup({
+        local opts = {
           capabilities = capabilities,
           on_attach = on_attach,
           flags = {
             debounce_text_changes = 500,
-          },
-          -- Merge individual server options
-          vim.tbl_deep_extend('force', server_opts or {}, {}),
-        })
+          }
+        }
+
+        -- Merge individual server options
+        opts = vim.tbl_deep_extend('force', opts, server_opts or {})
+
+        lspconfig[server].setup(opts)
       end
 
       -- Configure diagnostics

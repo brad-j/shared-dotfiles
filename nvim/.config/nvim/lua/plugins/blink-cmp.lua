@@ -1,10 +1,8 @@
 return {
   'saghen/blink.cmp',
-  --  dependencies = { 'olimorris/codecompanion.nvim' },
   dependencies = {
     'Kaiser-Yang/blink-cmp-avante',
   },
-
   version = '1.*',
   opts = {
     keymap = { preset = 'super-tab' },

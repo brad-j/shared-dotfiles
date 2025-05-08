@@ -3,6 +3,8 @@ local builtin = require("telescope.builtin")
 
 -- General
 map("i", "jk", "<esc>", { noremap = true, silent = true })
+map("n", "<leader>rd", "<C-r>", { desc = "Redo undo" })
+map("v", "<leader>ee", "<Esc>", { desc = "Escape visual mode" })
 
 -- Oil
 map("n", "<leader>-", "<cmd>Oil<CR>", { desc = "Open parent directory" })
@@ -35,6 +37,4 @@ map("n", "<leader>iw", ":vertical resize +10<CR>", { desc = "Increase window wid
 map("n", "<leader>dw", ":vertical resize -10<CR>", { desc = "Decrease window width" })
 
 -- AI
---map({ "n", "v" }, "<leader>a", "<cmd>CodeCompanionChat Toggle<CR>", { desc = "AI companion" })
---map({ "n", "v" }, "<C-a>", "<cmd>CodeCompanionActions<CR>", { desc = "AI companion actions" })
---map("v", "ga", "<cmd>CodeCompanionChat Add<CR>", { noremap = true, silent = true })
+--map({ "n", "v" }, "<leader>a", "<cmd>AvanteAsk<CR>", { desc = "AvanteAsk" })

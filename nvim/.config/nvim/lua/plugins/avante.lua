@@ -20,6 +20,7 @@ return {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
     --- The below dependencies are optional,
+    "saghen/blink.cmp",
     "nvim-telescope/telescope.nvim",
     "nvim-tree/nvim-web-devicons",
     {
