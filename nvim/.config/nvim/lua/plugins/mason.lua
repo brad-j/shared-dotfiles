@@ -1,6 +1,3 @@
----@alias vim table
----@diagnostic disable: undefined-global
-
 return {
   {
     "williamboman/mason.nvim",
@@ -52,6 +49,7 @@ return {
       mason_lspconfig.setup({
         ensure_installed = {
           "lua_ls",
+          "intelephense",
           "ts_ls",
           "html",
           "tailwindcss",
@@ -79,6 +77,7 @@ return {
             },
           },
         },
+        intelephense = {},
         ts_ls = {},
         html = {},
         tailwindcss = {},
@@ -98,7 +97,6 @@ return {
             debounce_text_changes = 500,
           }
         }
-
         -- Merge individual server options
         opts = vim.tbl_deep_extend('force', opts, server_opts or {})
 

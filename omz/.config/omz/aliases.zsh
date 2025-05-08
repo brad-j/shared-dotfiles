@@ -3,7 +3,7 @@ alias c='clear'
 alias n='nvim'
 alias fman='compgen -c | fzf | xargs man'
 
-#yazi
+# Yazi
 alias y='yazi'
 
 # Zellij
@@ -14,6 +14,9 @@ alias ga='g add -A'
 alias gs='g status'
 alias gp='g push'
 alias gc="g commit -m"
+
+# lazygit
+alias lg='lazygit'
 
 # OpenTofu
 alias t='tofu'
