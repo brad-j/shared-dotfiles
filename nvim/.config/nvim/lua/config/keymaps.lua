@@ -10,8 +10,8 @@ map("v", "<leader>ee", "<Esc>", { desc = "Escape visual mode" })
 map("n", "<leader>-", "<cmd>Oil<CR>", { desc = "Open parent directory" })
 
 -- New line without insert mode
-map("n", "<leader>o", "o<Esc>jk", { desc = "New line below" })
-map("n", "<leader>O", "O<Esc>jk", { desc = "New line above" })
+map("n", "<leader>o", "o<Esc>", { desc = "New line below" })
+map("n", "<leader>O", "O<Esc>", { desc = "New line above" })
 
 -- Easy Save
 map("n", "<leader>w", ":write<CR>", { desc = "Save file" })
