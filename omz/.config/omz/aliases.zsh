@@ -3,6 +3,12 @@ alias c='clear'
 alias n='nvim'
 alias fman='compgen -c | fzf | xargs man'
 
+
+# pnpm
+alias p='pnpm'
+alias pd='pnpm dev'
+alias pdl='pnpm dlx'
+
 # Yazi
 alias y='yazi'
 
@@ -20,10 +26,6 @@ alias lg='lazygit'
 
 # OpenTofu
 alias t='tofu'
-
-# pnpm
-alias p='pnpm'
-alias pd='pnpm dev'
 
 # k3s / k8s
 alias k='kubectl'
